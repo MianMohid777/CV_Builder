@@ -73,20 +73,14 @@
             android:orientation="horizontal"
             android:gravity="center_vertical">
 
-            <TextView
-                android:id="@+id/tvCertDate"
+            <EditText
+                android:id="@+id/etDateEarned"
+                android:textSize="16sp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:hint="@string/date_earned_hint"
+                android:hint="@string/duration_hint"
                 android:enabled="false"/>
-
-            <ImageButton
-                android:id="@+id/btnCertDate"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:src="@drawable/ic_calendar"
-                android:background="?attr/selectableItemBackgroundBorderless"/>
 
         </LinearLayout>
 

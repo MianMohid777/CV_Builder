@@ -3,6 +3,7 @@ package com.example.cv_builder;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.activity.result.ActivityResultLauncher;
@@ -26,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
     CardView experience;
     CardView cert;
     CardView ref;
+
+    TextView prev;
 
     static CV myCv;
 
@@ -84,6 +87,34 @@ public class MainActivity extends AppCompatActivity {
             i.putStringArrayListExtra("EXP_LIST",myCv.getExperience());
             getDataLauncher.launch(i);
         });
+
+        cert.setOnClickListener(v -> {
+
+            Intent i = new Intent(MainActivity.this,CertActivity.class);
+            i.putStringArrayListExtra("CERTS_LIST",myCv.getCerts());
+            getDataLauncher.launch(i);
+        });
+
+        ref.setOnClickListener(v -> {
+
+            Intent i = new Intent(MainActivity.this,CertActivity.class);
+            i.putStringArrayListExtra("REFS_LIST",myCv.getRefer());
+            getDataLauncher.launch(i);
+        });
+
+        prev.setOnClickListener(v -> {
+            Intent previewIntent = new Intent(this, PreviewActivity.class);
+            previewIntent.putExtra("NAME", myCv.getName());
+            previewIntent.putExtra("EMAIL", myCv.getEmail());
+            previewIntent.putExtra("PHONE", myCv.getPhone());
+            previewIntent.putExtra("SUMMARY", myCv.getSummary());
+            previewIntent.putStringArrayListExtra("EDUCATION", myCv.getEducation());
+            previewIntent.putStringArrayListExtra("EXPERIENCE", myCv.getExperience());
+            previewIntent.putStringArrayListExtra("CERTIFICATES", myCv.getCerts());
+            previewIntent.putStringArrayListExtra("REFERENCES", myCv.getRefer());
+            previewIntent.putExtra("URI", myCv.getUri());
+            startActivity(previewIntent);
+        });
     }
 
 
@@ -96,6 +127,7 @@ public class MainActivity extends AppCompatActivity {
         experience = findViewById(R.id.exp_card);
         cert = findViewById(R.id.cert_card);
         ref = findViewById(R.id.ref_card);
+        prev = findViewById(R.id.prev);
 
         myCv = new CV();
 
