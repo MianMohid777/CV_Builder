@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
 
         ref.setOnClickListener(v -> {
 
-            Intent i = new Intent(MainActivity.this,CertActivity.class);
+            Intent i = new Intent(MainActivity.this,RefActivity.class);
             i.putStringArrayListExtra("REFS_LIST",myCv.getRefer());
             getDataLauncher.launch(i);
         });
@@ -174,7 +174,7 @@ public class MainActivity extends AppCompatActivity {
                             myCv.setExperience(experience);
 
                         if(certs!= null)
-                            myCv.setExperience(experience);
+                            myCv.setCerts(certs);
 
                         if(refs != null)
                             myCv.setRefer(refs);

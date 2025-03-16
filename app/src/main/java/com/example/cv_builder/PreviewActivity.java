@@ -83,24 +83,27 @@ public class PreviewActivity extends AppCompatActivity {
         if (education != null && education.size() == 3) {
 
             edu.append("").append(education.get(0)).append("\n").append(education.get(1)).append("\n").append(education.get(2));
-
+            tvEducation.setText(edu);
         }
 
         if (experience != null && experience.size() == 4) {
 
             exp.append("").append(experience.get(0)).append("\n").append(experience.get(1)).append("\n").append(experience.get(2)).append("\n").append(experience.get(3)
             );
+            tvExperience.setText(exp);
         }
 
         if (certificates != null && certificates.size() == 3) {
 
             cert.append("").append(certificates.get(0)).append("\n").append(certificates.get(1)).append("\n").append(certificates.get(2));
-
+            tvCertificates.setText(cert);
         }
 
         if (references != null && references.size() == 4) {
             ref.append("").append(references.get(0)).append("\n").append(references.get(1)).append("\n").append(references.get(2)).append("\n").append(references.get(3)
             );
+
+            tvReferences.setText(ref);
         }
 
         shareBtn.setOnClickListener(v -> {
@@ -119,11 +122,9 @@ public class PreviewActivity extends AppCompatActivity {
 
             shareText.append("Education:\n").append(edu);
 
-
             // Experience
 
             shareText.append("Experience:\n").append(exp);
-
 
             // Certificates
 
@@ -137,6 +138,8 @@ public class PreviewActivity extends AppCompatActivity {
             shareIntent.setType("text/plain");
             shareIntent.putExtra(Intent.EXTRA_SUBJECT, "My CV Details");
             shareIntent.putExtra(Intent.EXTRA_TEXT, shareText.toString());
+
+            startActivity(Intent.createChooser(shareIntent, "Share CV via"));
         });
 
         backBtn.setOnClickListener(v -> {

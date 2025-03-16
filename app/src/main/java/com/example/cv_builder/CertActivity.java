@@ -27,7 +27,7 @@ public class CertActivity extends AppCompatActivity {
 
         Intent i = getIntent();
 
-        ArrayList<String> exp = i.getStringArrayListExtra("CERT_LIST");
+        ArrayList<String> exp = i.getStringArrayListExtra("CERTS_LIST");
 
         if (exp != null && exp.size() == 3)
         {
@@ -68,7 +68,7 @@ public class CertActivity extends AppCompatActivity {
 
             }
 
-            intent.putStringArrayListExtra("CERT_LIST",myCert);
+            intent.putStringArrayListExtra("CERTS_LIST",myCert);
 
             setResult(RESULT_OK, intent);
             finish();
