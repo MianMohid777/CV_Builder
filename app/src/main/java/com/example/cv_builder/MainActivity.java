@@ -50,7 +50,22 @@ public class MainActivity extends AppCompatActivity {
             i.putExtra("URI",myCv.getUri());
             getDataLauncher.launch(i);
         });
+
+
+
+        detail.setOnClickListener(v -> {
+
+            Intent i = new Intent(MainActivity.this,DetailActivity.class);
+            i.putExtra("NAME",myCv.getName());
+            i.putExtra("EMAIL",myCv.getEmail());
+            i.putExtra("PHONE",myCv.getPhone());
+
+            getDataLauncher.launch(i);
+        });
+
+
     }
+
 
     void init()
     {
