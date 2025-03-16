@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/backBtnCert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/back" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/certificates"
+        android:textColor="@color/purple"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="20dp">
+
+        <!-- Certificate Name -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/certificate_name"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/etCertName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/cert_name_hint"
+            android:enabled="false"/>
+
+        <!-- Issuing Organization -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/issuing_org"
+            android:layout_marginTop="16dp"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/etCertOrg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/org_hint"
+            android:enabled="false"/>
+
+        <!-- Date Earned -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/date_earned"
+            android:layout_marginTop="16dp"
+            android:textSize="18sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvCertDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/date_earned_hint"
+                android:enabled="false"/>
+
+            <ImageButton
+                android:id="@+id/btnCertDate"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_calendar"
+                android:background="?attr/selectableItemBackgroundBorderless"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnEditCert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:backgroundTint="@color/purple"
+            android:text="@string/edit"
+            android:layout_gravity="center"/>
+
+        <Button
+            android:id="@+id/btnSaveCert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+            android:enabled="false"/>
+
+    </LinearLayout>
+
+</LinearLayout>

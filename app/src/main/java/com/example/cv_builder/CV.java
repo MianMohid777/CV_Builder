@@ -2,6 +2,7 @@ package com.example.cv_builder;
 
 import android.net.Uri;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class CV {
@@ -13,17 +14,17 @@ public class CV {
 
     private String summary;
 
-    private List<String> education;
+    private ArrayList<String> education;
 
     private Uri uri;
 
-    private List<String> experience;
+    private ArrayList<String> experience;
 
-    private List<String> refer;
+    private ArrayList<String> refer;
 
-    private List<String> certs;
+    private ArrayList<String> certs;
 
-    public CV(String name, String email, String phone, String summary, List<String> education, Uri uri, List<String> experience, List<String> refer,List<String> certs) {
+    public CV(String name, String email, String phone, String summary, ArrayList<String> education, Uri uri, ArrayList<String> experience, ArrayList<String> refer,ArrayList<String> certs) {
         this.name = name;
         this.email = email;
         this.phone = phone;
@@ -70,11 +71,11 @@ public class CV {
         this.summary = summary;
     }
 
-    public List<String> getEducation() {
+    public ArrayList<String> getEducation() {
         return education;
     }
 
-    public void setEducation(List<String> education) {
+    public void setEducation(ArrayList<String> education) {
         this.education = education;
     }
 
@@ -86,27 +87,27 @@ public class CV {
         this.uri = uri;
     }
 
-    public List<String> getExperience() {
+    public ArrayList<String> getExperience() {
         return experience;
     }
 
-    public void setExperience(List<String> experience) {
+    public void setExperience(ArrayList<String> experience) {
         this.experience = experience;
     }
 
-    public List<String> getRefer() {
+    public ArrayList<String> getRefer() {
         return refer;
     }
 
-    public void setRefer(List<String> refer) {
+    public void setRefer(ArrayList<String> refer) {
         this.refer = refer;
     }
 
-    public List<String> getCerts() {
+    public ArrayList<String> getCerts() {
         return certs;
     }
 
-    public void setCerts(List<String> certs) {
+    public void setCerts(ArrayList<String> certs) {
         this.certs = certs;
     }
 }

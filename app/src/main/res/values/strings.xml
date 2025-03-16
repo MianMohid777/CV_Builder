@@ -24,4 +24,38 @@
     <string name="enter_your_email">Enter your email</string>
     <string name="professional_summary">Professional Summary</string>
     <string name="write_your_professional_summary">Write your professional summary...</string>
+    <string name="institution">Institution</string>
+    <string name="institution_hint">University Name</string>
+    <string name="degree">Degree</string>
+    <string name="degree_hint">Bachelor of Science</string>
+    <string name="dates">Dates</string>
+    <string name="dates_hint">MM/YYYY - MM/YYYY</string>
+
+    <string name="company">Company</string>
+    <string name="company_hint">Company Name</string>
+    <string name="position">Position</string>
+    <string name="position_hint">Software Engineer</string>
+    <string name="duration">Duration</string>
+    <string name="duration_hint">MM/YYYY - MM/YYYY</string>
+    <string name="description">Description</string>
+    <string name="description_hint">Key responsibilities and achievements</string>
+
+    !-- Certificates -->
+    <string name="certificates">Certifications</string>
+    <string name="certificate_name">Certificate Name</string>
+    <string name="cert_name_hint">AWS Certified Developer</string>
+    <string name="issuing_org">Issuing Organization</string>
+    <string name="org_hint">Amazon Web Services</string>
+    <string name="date_earned">Date Earned</string>
+    <string name="date_earned_hint">MM/YYYY</string>
+
+    <!-- References -->
+    <string name="reference_name">Reference Name</string>
+    <string name="name_hint">John Doe</string>
+    <string name="ref_position">Position</string>
+    <string name="ref_position_hint">Senior Manager</string>
+    <string name="ref_company">Company</string>
+    <string name="ref_company_hint">Tech Corp</string>
+    <string name="contact">Contact</string>
+    <string name="contact_hint">john@email.com | +1234567890</string>
 </resources>

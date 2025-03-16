@@ -25,6 +25,11 @@
         <activity android:name=".ProfilePicActivity"/>
         <activity android:name=".DetailActivity"/>
         <activity android:name=".SummaryActivity"/>
+        <activity android:name=".EduActivity"/>
+        <activity android:name=".ExpActivity"/>
+        <activity android:name=".CertActivity"/>
+        <activity android:name=".RefActivity"/>
+        <activity android:name=".PreviewActivity"/>
     </application>
 
 </manifest>

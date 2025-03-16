@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/backBtnEdu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/back" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/education"
+        android:textColor="@color/purple"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="20dp">
+
+        <!-- Institution -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/institution"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/etInstitution"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/institution_hint"
+            android:enabled="false"/>
+
+        <!-- Degree -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/degree"
+            android:layout_marginTop="16dp"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/etDegree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/degree_hint"
+            android:enabled="false"/>
+
+        <!-- Dates -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dates"
+            android:layout_marginTop="16dp"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/etEduDates"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/dates_hint"
+            android:enabled="false"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnEditEdu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:backgroundTint="@color/purple"
+            android:text="@string/edit"
+            android:layout_gravity="center"/>
+
+        <Button
+            android:id="@+id/btnSaveEdu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+            android:enabled="false"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -13,6 +13,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -63,7 +64,26 @@ public class MainActivity extends AppCompatActivity {
             getDataLauncher.launch(i);
         });
 
+        summary.setOnClickListener(v -> {
 
+            Intent i = new Intent(MainActivity.this,SummaryActivity.class);
+            i.putExtra("SUMMARY",myCv.getSummary());
+            getDataLauncher.launch(i);
+        });
+
+        education.setOnClickListener(v -> {
+
+            Intent i = new Intent(MainActivity.this,EduActivity.class);
+            i.putStringArrayListExtra("EDUCATION_LIST",myCv.getEducation());
+            getDataLauncher.launch(i);
+        });
+
+        experience.setOnClickListener(v -> {
+
+            Intent i = new Intent(MainActivity.this,ExpActivity.class);
+            i.putStringArrayListExtra("EXP_LIST",myCv.getExperience());
+            getDataLauncher.launch(i);
+        });
     }
 
 
@@ -94,11 +114,11 @@ public class MainActivity extends AppCompatActivity {
 
                         String summary = dataIntent.getStringExtra("SUMMARY");
 
-                        List<String> education = dataIntent.getStringArrayListExtra("EDUCATION_LIST");
-                        List<String> experience= dataIntent.getStringArrayListExtra("EXP_LIST");
-                        List<String> certs = dataIntent.getStringArrayListExtra("CERTS_LIST");
+                        ArrayList<String> education = dataIntent.getStringArrayListExtra("EDUCATION_LIST");
+                        ArrayList<String> experience= dataIntent.getStringArrayListExtra("EXP_LIST");
+                        ArrayList<String> certs = dataIntent.getStringArrayListExtra("CERTS_LIST");
 
-                        List<String> refs = dataIntent.getStringArrayListExtra("REFS_LIST");
+                        ArrayList<String> refs = dataIntent.getStringArrayListExtra("REFS_LIST");
 
                         if(uri != null)
                             myCv.setUri(uri);

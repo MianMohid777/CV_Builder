@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/backBtnRef"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/back" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/references"
+        android:textColor="@color/purple"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="20dp">
+
+        <!-- Reference Name -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reference_name"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/etRefName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/name_hint"
+            android:enabled="false"/>
+
+        <!-- Position -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ref_position"
+            android:layout_marginTop="16dp"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/etRefPosition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/ref_position_hint"
+            android:enabled="false"/>
+
+        <!-- Company -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ref_company"
+            android:layout_marginTop="16dp"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/etRefCompany"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/ref_company_hint"
+            android:enabled="false"/>
+
+        <!-- Contact -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/contact"
+            android:layout_marginTop="16dp"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/etRefContact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/contact_hint"
+            android:inputType="textEmailAddress|phone"
+            android:enabled="false"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnEditRef"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:backgroundTint="@color/purple"
+            android:text="@string/edit"
+            android:layout_gravity="center"/>
+
+        <Button
+            android:id="@+id/btnSaveRef"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+            android:enabled="false"/>
+
+    </LinearLayout>
+
+</LinearLayout>
