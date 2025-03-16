@@ -47,15 +47,16 @@
             android:text="@string/personal_details"
             android:textStyle="bold"
             android:gravity="start"
+            android:fontFamily="monospace"
             android:layout_marginTop="30dp"
             android:layout_marginBottom="16dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:gravity="center"
-            android:layout_marginBottom="24dp">
+            android:layout_marginBottom="15dp">
 
             <TextView
                 android:id="@+id/tvName"
@@ -63,21 +64,28 @@
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                android:gravity="center"
-                android:layout_marginBottom="16dp"/>
+                android:fontFamily="monospace"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"/>
 
             <TextView
                 android:id="@+id/tvEmail"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:textSize="14sp"/>
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="monospace"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/tvPhone"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="14sp"/>
+                android:textSize="16sp"
+                android:fontFamily="monospace"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"/>
+
         </LinearLayout>
 
         <!-- Summary -->
@@ -87,6 +95,7 @@
             android:text="@string/professional_summary"
             android:textSize="18sp"
             android:textStyle="bold"
+            android:fontFamily="monospace"
             android:layout_marginBottom="8dp"/>
 
         <TextView
@@ -94,6 +103,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="14sp"
+            android:fontFamily="monospace"
             android:layout_marginBottom="16dp"/>
 
         <!-- Education -->
@@ -103,6 +113,7 @@
             android:text="@string/education"
             android:textSize="18sp"
             android:textStyle="bold"
+            android:fontFamily="monospace"
             android:layout_marginBottom="8dp"/>
 
         <TextView
@@ -110,6 +121,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="14sp"
+            android:fontFamily="monospace"
             android:layout_marginBottom="16dp"/>
 
         <!-- Experience -->
@@ -119,6 +131,7 @@
             android:text="@string/experience"
             android:textSize="18sp"
             android:textStyle="bold"
+            android:fontFamily="monospace"
             android:layout_marginBottom="8dp"/>
 
         <TextView
@@ -126,6 +139,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="14sp"
+            android:fontFamily="monospace"
             android:layout_marginBottom="16dp"/>
 
         <!-- Certificates -->
@@ -135,6 +149,7 @@
             android:text="@string/certificates"
             android:textSize="18sp"
             android:textStyle="bold"
+            android:fontFamily="monospace"
             android:layout_marginBottom="8dp"/>
 
         <TextView
@@ -151,6 +166,7 @@
             android:text="@string/references"
             android:textSize="18sp"
             android:textStyle="bold"
+            android:fontFamily="monospace"
             android:layout_marginBottom="8dp"/>
 
         <TextView
@@ -158,6 +174,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="14sp"
+            android:fontFamily="monospace"
             android:layout_marginBottom="24dp"/>
 
 
@@ -167,6 +184,7 @@
             android:layout_height="wrap_content"
             android:text="@string/share"
             android:layout_marginTop="16dp"
+            android:fontFamily="monospace"
             android:backgroundTint="@color/purple"/>
 
     </LinearLayout>
